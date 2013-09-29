@@ -1,5 +1,7 @@
-# include"Automata.h"
-int Automata::precedencia(char op) {
+#include <iostream>
+#include "Pila.h"
+#include <string>
+int precedencia(char op) {
     int prf = 99;
     if (op == '*' || op == '+'){
         prf = 5;
@@ -18,9 +20,8 @@ int Automata::precedencia(char op) {
     }
     return prf;
 }
-Automata Automata::parser(std::string input){
-    Pila salida;
-    Pila operadores;
+int main (void){
+    std::string input("(a.a|b.b|c.c)*.b.c");
     Pila *salida= new Pila();
     Pila *operadores= new Pila();
     int i = 0;
@@ -66,4 +67,11 @@ Automata Automata::parser(std::string input){
     while((o=operadores->pop()) != '\0'){
         salida->push(o);
     }
+    for(i=0;i<=15;i++){
+        char c = salida->pop();
+        std::cout << c;
+    }
+
+
 }
+
