@@ -1,6 +1,7 @@
 #ifndef __AUTOMATA_H__
 #define	__AUTOMATA_H__
 #include "Pila.h"
+#include "Arbol.h"
 #include <string>
 class Automata{
  public:
