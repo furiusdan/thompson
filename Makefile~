@@ -11,5 +11,5 @@ Automata.o: Automata.cpp
 Pila.o:	Pila.cpp
 	g++ -c Pila.cpp
 clean:
-	rm automata *.o
+	rm a.out *.o
 
