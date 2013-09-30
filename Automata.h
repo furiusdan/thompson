@@ -1,14 +1,17 @@
 #ifndef __AUTOMATA_H__
 #define	__AUTOMATA_H__
-#include "Pila.h"
-#include <string>
+#include "Estado.h"
 class Automata{
- public:
-    Automata();
-    Automata(std::string entrada);
- private:
-    Automata parser(std::string entrada);
-    std::string toPostfija(std::string entrada);
-    int precedencia(char op);
-};
+	private:
+		Estado *inicial;
+		Estado *final;
+	public:
+		void setInicial(Estado *e);
+		Estado *getInicial();
+
+		void setFinal(Estado *e);
+		Estado *getFinal();
+
+		Automata(Estado *inicial, Estado *final);
+ };
 #endif
